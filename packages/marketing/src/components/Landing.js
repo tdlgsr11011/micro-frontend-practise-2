@@ -74,7 +74,7 @@ export default function Album() {
           <Container maxWidth="sm">
             <Typography
               component="h1"
-              variant="h2"
+              variant="h3"
               align="center"
               color="textPrimary"
               gutterBottom
