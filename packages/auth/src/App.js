@@ -18,8 +18,8 @@ const App = ({ memoryHistory }) => {
       <StylesProvider generateClassName={generateClassName}>
         <Router history={memoryHistory}>
           <Switch>
-            <Route path="/auth/user/signin" component={SignIn} />
-            <Route path="/auth/user/signup" component={SignUp} />
+            <Route path="/auth/signin" component={SignIn} />
+            <Route path="/auth/signup" component={SignUp} />
           </Switch>
         </Router>
       </StylesProvider>
