@@ -4,18 +4,20 @@ import { useHistory } from "react-router-dom";
 
 const MarketingApp = () => {
   const ref = useRef(null);
-  const history = useHistory();
+  const browserHistory = useHistory();
 
   useEffect(() => {
-    mountMarketing(ref.current, {
+    const { onParentNavigate } = mountMarketing(ref.current, {
       onNavigate: ({ pathname: nextPathname }) => {
-        const { pathname: currentPathname } = history.location;
+        const { pathname: currentPathname } = browserHistory.location;
         if (currentPathname !== nextPathname) {
-          history.push(nextPathname);
+          browserHistory.push(nextPathname);
         }
       },
     });
-  });
+
+    browserHistory.listen(onParentNavigate);
+  }, []);
 
   return <div ref={ref} />;
 };
