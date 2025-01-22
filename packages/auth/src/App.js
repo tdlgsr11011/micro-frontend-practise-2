@@ -13,6 +13,7 @@ const generateClassName = createGenerateClassName({
 });
 
 const App = ({ memoryHistory, onSignIn }) => {
+  
   return (
     <div>
       <StylesProvider generateClassName={generateClassName}>
