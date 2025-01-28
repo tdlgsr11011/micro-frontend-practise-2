@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   module: {
@@ -14,11 +15,29 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.module\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader, // Extracts CSS into separate files
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]__[hash:base64:5]", // Enables CSS Modules
+              },
+            },
+          },
+          "sass-loader", // Compiles Sass to CSS
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css", // Output file name for extracted CSS
     }),
   ],
 };
