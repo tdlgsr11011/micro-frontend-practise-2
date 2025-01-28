@@ -1,4 +1,4 @@
-@import "../assets/globalVars";
+@import "../../assets/globalVars";
 
 .navbar {
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .navTitle {
-  padding-left: 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
 }
 
@@ -26,5 +26,24 @@
   &:hover {
     background-color: $color1hover;
     cursor: pointer;
+  }
+}
+
+.drawerButton {
+  display: none;
+  padding: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .drawerButton {
+    display: flex;
+    align-items: center;
+  }
+
+  .navItem {
+    display: none;
   }
 }

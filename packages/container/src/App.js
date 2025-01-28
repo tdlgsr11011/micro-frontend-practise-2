@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.scss";
 
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 
 const MarketingLazy = lazy(() => import("./components/MarketingApp"));
 const AuthLazy = lazy(() => import("./components/AuthApp"));
