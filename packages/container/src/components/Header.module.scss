@@ -1,0 +1,30 @@
+@import "../assets/globalVars";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color1;
+  align-items: center;
+  color: white;
+  padding: 0px;
+}
+
+.navTitle {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.navItems {
+  display: flex;
+}
+
+.navItem {
+  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  &:hover {
+    background-color: $color1hover;
+    cursor: pointer;
+  }
+}
