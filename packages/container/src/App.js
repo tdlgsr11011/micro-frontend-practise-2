@@ -5,7 +5,7 @@ import {
 } from "@material-ui/core/styles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import "./_index.scss";
+import "./App.scss";
 
 import Header from "./components/Header";
 
