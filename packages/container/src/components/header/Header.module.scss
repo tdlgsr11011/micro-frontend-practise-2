@@ -10,8 +10,8 @@
 }
 
 .navTitle {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 1em;
+  font-size: 1.5em;
 }
 
 .navItems {
@@ -19,9 +19,9 @@
 }
 
 .navItem {
-  padding: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 
   &:hover {
     background-color: $color1hover;
@@ -31,11 +31,18 @@
 
 .drawerButton {
   display: none;
-  padding: 1rem;
+  padding: 1em;
   &:hover {
     cursor: pointer;
     background-color: $color1hover;
   }
+}
+
+.drawerItem {
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 15em;
 }
 
 @media screen and (orientation: portrait) {
