@@ -30,6 +30,15 @@ module.exports = {
           "sass-loader", // Compiles Sass to CSS
         ],
       },
+      {
+        test: /\.scss$/, // Handles global SCSS files
+        exclude: /\.module\.scss$/, // Exclude CSS Modules
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader", // No modules option here for global styles
+          "sass-loader",
+        ],
+      },
     ],
   },
   plugins: [
