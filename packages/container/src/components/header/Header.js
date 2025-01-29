@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 import NavDrawer from "./NavDrawer";
 import MenuButton from "./MenuButton";
@@ -15,7 +15,9 @@ export default function Header() {
   return (
     <React.Fragment>
       <nav className={styles.navbar}>
-        <div className={styles.navTitle}>React Microfrontend</div>
+        <Link className={styles.navTitle} to={"/"}>
+          React Microfrontend
+        </Link>
         <div className={styles.navItems}>
           <div className={styles.navItem}>Item1</div>
           <div className={styles.navItem}>Item2</div>
