@@ -5,7 +5,9 @@ import {
 } from "@material-ui/core/styles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Header from "./components/Header";
+import "./App.scss";
+
+import Header from "./components/header/Header";
 
 const MarketingLazy = lazy(() => import("./components/MarketingApp"));
 const AuthLazy = lazy(() => import("./components/AuthApp"));
@@ -25,7 +27,7 @@ const App = () => {
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <div>
-          <Header isSignedIn={isSignedIn} onSignOut={onSignOut}/>
+          <Header isSignedIn={isSignedIn} onSignOut={onSignOut} />
           <Suspense fallback={<Progress />}>
             <Switch>
               <Route path="/auth">

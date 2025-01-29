@@ -1,0 +1,62 @@
+@import "../../assets/globalVars";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color1;
+  align-items: center;
+  color: white;
+  padding: 0px;
+}
+
+.navTitle {
+  padding: 1rem;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: $color1hover;
+  }
+}
+
+.navItems {
+  display: flex;
+}
+
+.navItem {
+  padding: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  &:hover {
+    background-color: $color1hover;
+    cursor: pointer;
+  }
+}
+
+.drawerButton {
+  display: none;
+  padding: 1em;
+  &:hover {
+    cursor: pointer;
+    background-color: $color1hover;
+  }
+}
+
+.drawerItem {
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 15em;
+}
+
+@media screen and (orientation: portrait) {
+  .drawerButton {
+    display: flex;
+    align-items: center;
+  }
+
+  .navItem {
+    display: none;
+  }
+}
