@@ -11,7 +11,7 @@ const HomePage = () => {
       <div className={styles.profileContainer}>
         <div className={styles.imgContainer}>
           <img src={myImage} />
-          <div>Atharv Joshi</div>
+          <div>Atharv Hrushikesh Joshi</div>
         </div>
         <WelcomeMessage />
       </div>

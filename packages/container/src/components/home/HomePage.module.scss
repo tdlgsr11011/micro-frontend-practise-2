@@ -40,9 +40,11 @@
 
   img {
     overflow: hidden;
+    width: min(250px, 100vw);
+    border-radius: 0.5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    width: min(250px, 100vw);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 }
 
