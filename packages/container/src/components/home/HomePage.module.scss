@@ -1,0 +1,64 @@
+@import "../../assets/globalVars";
+
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileContainer {
+  display: flex;
+  width: 40rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  color: $color1;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(250px, 100vw);
+
+  @media screen and (orientation: portrait) {
+    padding-bottom: 1rem;
+  }
+
+  div {
+    padding-top: 0.5rem;
+  }
+
+  img {
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0.5rem;
+    width: min(250px, 100vw);
+  }
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (orientation: landscape) {
+    transform: translateY(-1rem);
+  }
+}
+
+.welcomeMessage div {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  @media screen and (orientation: portrait) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
