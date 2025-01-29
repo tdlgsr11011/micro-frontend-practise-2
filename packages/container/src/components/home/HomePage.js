@@ -3,6 +3,7 @@ import React from "react";
 import myImage from "../../assets/images/20241108_125213_2.jpg";
 import styles from "./HomePage.module.scss";
 import WelcomeMessage from "./WelcomeMessage";
+import OtherLinks from "./OtherLinks";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         </div>
         <WelcomeMessage />
       </div>
+      <OtherLinks />
     </div>
   );
 };

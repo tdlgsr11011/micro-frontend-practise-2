@@ -63,3 +63,57 @@
     padding-right: 1rem;
   }
 }
+
+.otherLinks {
+  display: flex;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @media screen and (orientation: portrait) {
+    margin-top: 0;
+  }
+}
+
+.github {
+  color: white;
+  background-color: #26a641;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transition: 0.25s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: #237e37;
+  }
+  @media screen and (orientation: portrait) {
+    width: 50vw;
+    padding: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 0px;
+  }
+}
+
+.linkedin {
+  color: white;
+  background-color: #0a66c2;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transition: 0.25s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: #0e4e8f;
+  }
+  @media screen and (orientation: portrait) {
+    width: 50vw;
+    padding: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 0px;
+  }
+}
