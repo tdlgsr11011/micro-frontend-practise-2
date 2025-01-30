@@ -27,16 +27,18 @@ const App = () => {
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
-        <div>
+        <div className="appContainer">
           <Header isSignedIn={isSignedIn} onSignOut={onSignOut} />
-          <Suspense fallback={<Progress />}>
-            <Switch>
-              <Route path="/auth">
-                <AuthLazy onSignIn={() => setIsSignedIn(true)} />
-              </Route>
-              <Route path="/" component={HomePage} />
-            </Switch>
-          </Suspense>
+          <div className="mainContainer">
+            <Suspense fallback={<Progress />}>
+              <Switch>
+                <Route path="/auth">
+                  <AuthLazy onSignIn={() => setIsSignedIn(true)} />
+                </Route>
+                <Route path="/" component={HomePage} />
+              </Switch>
+            </Suspense>
+          </div>
         </div>
       </StylesProvider>
     </BrowserRouter>
