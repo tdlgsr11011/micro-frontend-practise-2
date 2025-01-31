@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-const apiKey = process.env.API_KEY;
-const baseUrl = process.env.RECIPE_BASE_URL;
+const apiKey = process.env.FORKIFY_API_KEY;
+const baseUrl = process.env.FORKIFY_BASE_URL;
 
 const useRecipeStore = create((set) => ({
   loading: false,
@@ -14,7 +14,7 @@ const useRecipeStore = create((set) => ({
       const data = await response.json();
       set((state) => ({ recipes: data.data.recipes }));
     } catch (err) {
-      console.log(err);
+      throw new Error(err);
     }
   },
 }));
