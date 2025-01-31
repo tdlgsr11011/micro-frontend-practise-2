@@ -1,9 +1,21 @@
 import { create } from "zustand";
 
+const apiKey = process.env.API_KEY;
+const baseUrl = process.env.RECIPE_BASE_URL;
+
 const useRecipeStore = create((set) => ({
-  counter: 0,
-  increment: () => {
-    set((state) => ({ counter: state.counter + 1 }));
+  loading: false,
+  recipes: [],
+
+  fetchRecipes: async (queryText) => {
+    const url = `${baseUrl}/api/v2/recipes?search=${queryText}&key=${apiKey}`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      set((state) => ({ recipes: data.data.recipes }));
+    } catch (err) {
+      console.log(err);
+    }
   },
 }));
 
