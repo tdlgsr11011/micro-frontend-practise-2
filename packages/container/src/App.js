@@ -9,7 +9,8 @@ import "./App.scss";
 
 import Header from "./components/header/Header";
 
-const MarketingLazy = lazy(() => import("./components/remoteApps/MarketingApp"));
+// const MarketingLazy = lazy(() => import("./components/remoteApps/MarketingApp"));
+const FoodLazy = lazy(() => import("./components/remoteApps/FoodApp"));
 const AuthLazy = lazy(() => import("./components/remoteApps/AuthApp"));
 
 import Progress from "./components/Progress";
@@ -38,7 +39,7 @@ const App = () => {
                 <Route path="/auth">
                   <AuthLazy onSignIn={() => setIsSignedIn(true)} />
                 </Route>
-                <Route path="/food-app" component={MarketingLazy} />
+                <Route path="/food-app" component={FoodLazy} />
                 <Route path="/home" component={HomePage} />
               </Switch>
             </Suspense>
