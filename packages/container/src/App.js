@@ -3,7 +3,7 @@ import {
   StylesProvider,
   createGenerateClassName,
 } from "@material-ui/core/styles";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "./App.scss";
 
@@ -32,10 +32,14 @@ const App = () => {
           <div className="mainContainer">
             <Suspense fallback={<Progress />}>
               <Switch>
+                <Route exact path={"/"}>
+                  <Redirect to={"/home"} />
+                </Route>
                 <Route path="/auth">
                   <AuthLazy onSignIn={() => setIsSignedIn(true)} />
                 </Route>
-                <Route path="/" component={HomePage} />
+                <Route path="/food-app" component={MarketingLazy} />
+                <Route path="/home" component={HomePage} />
               </Switch>
             </Suspense>
           </div>

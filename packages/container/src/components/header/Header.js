@@ -19,7 +19,9 @@ export default function Header() {
           React Microfrontend
         </Link>
         <div className={styles.navItems}>
-          <div className={styles.navItem}>Item1</div>
+          <Link className={styles.navItem} to={"/food-app"}>
+            Food app
+          </Link>
           <div className={styles.navItem}>Item2</div>
           <div className={styles.navItem} style={{ paddingRight: "1rem" }}>
             Item3

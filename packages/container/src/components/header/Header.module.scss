@@ -29,6 +29,8 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   transition: 0.25s ease-in-out;
+  color: white;
+  text-decoration: none;
   &:hover {
     background-color: $color1hover;
     cursor: pointer;
