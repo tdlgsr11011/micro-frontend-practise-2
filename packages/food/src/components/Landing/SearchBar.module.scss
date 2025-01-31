@@ -1,0 +1,15 @@
+.searchbar {
+  background-color: white;
+  border: 0px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+}
+
+.searchbarContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
