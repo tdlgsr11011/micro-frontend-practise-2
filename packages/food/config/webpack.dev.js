@@ -1,4 +1,8 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const { merge } = require("webpack-merge");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
@@ -6,8 +10,8 @@ const jsonPackage = require("../package.json");
 
 const devConfig = {
   mode: "development",
-  output:{
-    publicPath: "http://localhost:8081/"
+  output: {
+    publicPath: "http://localhost:8081/",
   },
   devServer: {
     port: 8081,
@@ -26,6 +30,9 @@ const devConfig = {
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
 };
