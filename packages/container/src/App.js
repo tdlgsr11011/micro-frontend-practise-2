@@ -9,8 +9,8 @@ import "./App.scss";
 
 import Header from "./components/header/Header";
 
-const MarketingLazy = lazy(() => import("./components/MarketingApp"));
-const AuthLazy = lazy(() => import("./components/AuthApp"));
+const MarketingLazy = lazy(() => import("./components/remoteApps/MarketingApp"));
+const AuthLazy = lazy(() => import("./components/remoteApps/AuthApp"));
 
 import Progress from "./components/Progress";
 import HomePage from "./components/home/HomePage";
