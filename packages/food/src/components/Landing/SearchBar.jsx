@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./SearchBar.module.scss";
 
 const SearchBar = () => {
-  return <div>Hi there</div>;
+  return <input type="text" className={styles.searchbar} />;
 };
 
 export default SearchBar;

@@ -5,7 +5,7 @@ import {
   createGenerateClassName,
 } from "@material-ui/core/styles";
 
-import Landing from "./components/Landing/Landing";
+import Landing from "./components/Landing/Landing.jsx";
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "fo",

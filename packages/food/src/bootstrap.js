@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./App.jsx";
 import { createMemoryHistory, createBrowserHistory } from "history";
 
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
