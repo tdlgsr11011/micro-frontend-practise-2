@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
@@ -20,6 +21,9 @@ const prodConfig = {
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
       },
       shared: jsonPackage.dependencies,
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
 };
