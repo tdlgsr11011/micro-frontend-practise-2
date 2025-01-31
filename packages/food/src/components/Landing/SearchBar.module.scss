@@ -1,0 +1,17 @@
+@import "../../assets/globalVars";
+
+.searchbar {
+  background-color: white;
+  border: 0px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  box-shadow: $box-shadow1;
+}
+
+.searchbarContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
