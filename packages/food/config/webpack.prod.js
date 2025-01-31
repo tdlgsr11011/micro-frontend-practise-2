@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
@@ -7,7 +8,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: '/food/latest/'
+    publicPath: "/food/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -17,6 +18,9 @@ const prodConfig = {
         "./FoodApp": "./src/bootstrap",
       },
       shared: jsonPackage.dependencies,
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
 };
