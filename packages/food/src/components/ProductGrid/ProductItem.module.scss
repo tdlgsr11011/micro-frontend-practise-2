@@ -1,3 +1,22 @@
-.productItem{
-  
+@import "../../assets/globalVars";
+
+.productItem {
+  padding: 0.5rem;
+  box-shadow: $box-shadow1;
+  border-radius: 0.5rem;
+}
+
+.productImageContainer {
+  height: 12rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  display: flex;
+  place-content: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
