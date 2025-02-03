@@ -9,7 +9,9 @@ const ProductGrid = (props) => {
     return null;
   }
 
-  const grid = productItems.map((item) => <ProductItem itemDetails={item} />);
+  const grid = productItems.map((item) => (
+    <ProductItem itemDetails={item} key={item.id} />
+  ));
 
   return <div className={styles.gridContainer}>{grid}</div>;
 };
