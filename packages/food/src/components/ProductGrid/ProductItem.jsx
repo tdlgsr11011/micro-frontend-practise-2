@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ProductItem.module.scss";
 
 const ProductItem = (props) => {
   const { itemDetails } = props;
+  const [loading, setLoading] = useState(true);
   const title =
     itemDetails.title?.length > 20
       ? itemDetails.title.slice(0, 20) + "..."
@@ -11,10 +12,11 @@ const ProductItem = (props) => {
   return (
     <div className={styles.productItem}>
       <div className={styles.productImageContainer}>
-        <img src={itemDetails.image_url} />
+        {loading ? <div>Loading...</div> : null}
+        <img src={itemDetails.image_url} onLoad={() => setLoading(false)} />
       </div>
       <div>
-        <div>{title || "No title"}</div>
+        <div title={itemDetails.title}>{title || "No title"}</div>
       </div>
     </div>
   );
